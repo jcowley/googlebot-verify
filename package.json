@@ -1,0 +1,29 @@
+{
+  "name": "googlebot-verify",
+  "version": "0.0.1",
+  "description": "Verify that a request is from Google using Google's own documented DNS lookup steps",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcowley/googlebot-verify.git"
+  },
+  "keywords": [
+    "googlebot",
+    "google"
+  ],
+  "author": "Jason Cowley <jason.c.cowley@gmail.com> (https://github.com/jcowley)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jcowley/googlebot-verify/issues"
+  },
+  "homepage": "https://github.com/jcowley/googlebot-verify#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^3.5.0"
+  },
+  "dependencies": {
+  }
+}
