@@ -2,6 +2,13 @@
 const dns = require('dns');
 const url = require('url');
 
+/**
+ * Check an IP address to see if it belongs to Google.
+ * 
+ * @param  {String}   ip       The IP address to check
+ * @param  {Function} callback (error, isGoogle), where `isGoogle` is a boolean
+ * @return {Promise}           Promise with result of verification
+ */
 module.exports = (ip, callback) => {
   callback = callback || function () {}
 

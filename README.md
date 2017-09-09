@@ -11,20 +11,32 @@ You may wish to verify that a web crawler accessing your server is Googlebot (or
 
 This library implements Google's own verification steps outlined here: https://support.google.com/webmasters/answer/80553?hl=en
 
-## Code Example
-
-Usage in an express application:
-
-```javascript
-  const isGoogle = require('googlebot-verify');
-  const ipAddress = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-  if (isGoogle(ipAddress)) {
-    ...
-```
-
 ## Installation
 
 `npm install googlebot-verify`
+
+## Code Examples
+
+### Using a callback
+
+```javascript
+  const verify = require('googlebot-verify');
+  const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+
+  verify(ip, (error, isGoogle) => {
+      if (isGoogle) {
+        // do something with result...
+      }
+    }
+  }
+```
+
+### Using a Promise
+```javascript
+  verify(ip)
+  .then( isGoogle => { /* handle result */ })
+  .catch( e => { /* handle error */ });
+```
 
 ## Tests
 
