@@ -1,6 +1,6 @@
 {
   "name": "googlebot-verify",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Verify that a request is from Google using Google's recommended DNS verification steps",
   "main": "index.js",
   "scripts": {
