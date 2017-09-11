@@ -24,11 +24,10 @@ This library implements Google's own verification steps outlined here: https://s
   const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
 
   verify(ip, (error, isGoogle) => {
-      if (isGoogle) {
-        // do something with result...
-      }
+    if (isGoogle) {
+      // do something with result...
     }
-  }
+  });
 ```
 
 ### Using a Promise
