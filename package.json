@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node_modules/.bin/mocha --reporter spec",
-    "cover": "node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/*"
+    "cover": "nyc npm run test"
   },
   "repository": {
     "type": "git",
@@ -24,10 +24,9 @@
   },
   "homepage": "https://github.com/jcowley/googlebot-verify#readme",
   "devDependencies": {
-    "chai": "^4.1.2",
-    "coveralls": "^2.13.1",
-    "istanbul": "^0.4.5",
-    "mocha": "^3.5.0"
-  },
-  "dependencies": {}
+    "chai": "^4.3.4",
+    "coveralls": "^3.1.0",
+    "mocha": "^8.4.0",
+    "nyc": "^15.1.0"
+  }
 }
